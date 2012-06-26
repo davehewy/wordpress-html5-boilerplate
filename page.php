@@ -1,30 +1,37 @@
 <?php
-/**
- * @package WordPress
- * @subpackage HTML5_Boilerplate
- */
-
 get_header(); ?>
 
-<div id="main" role="main">
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  <article class="post" id="post-<?php the_ID(); ?>">
-    <header>
-      <h2><?php the_title(); ?></h2>
-    </header>
-  
-    <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
+<section id="body post-<?php the_ID(); ?>" <?php post_class('full-width'); ?>">
+    <div id="body-wrap" class="container">
+    	<div id="body-content" class="clearfix rtf">
+			
+			<div id="title" class="content single">
+				<h1><?php the_title(); ?></h1>
+				<?php if (function_exists('the_subheading')) { the_subheading('<h2 class="subheading">', '</h2>'); } ?>
+			</div>
 
-    <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-  
-  </article>
-  <?php endwhile; endif; ?>
-  <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
+			<?php if (function_exists('has_post_thumbnail') && has_post_thumbnail()) : ?>
+				<div id="featured">
+					<?php the_post_thumbnail('featured-page-single', array("class" => "post_thumbnail")); ?>
+				</div>
+			<?php endif;?>
 
-  <?php comments_template(); ?>
+			<div class="content single clear">
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<div id="envelope">
+						<div id="letter" class="clear">
+							<?php the_content(); ?>
+						</div>
+					</div>
+					<div class="clear">
+						<?php edit_post_link('Edit Page'); ?>
+					</div>
+				<?php endwhile; else: ?>
 
+				<?php endif; ?>
+			</div>
+					
+		</div>
+	</div>
 </div>
-
-<?php get_sidebar(); ?>
-
 <?php get_footer(); ?>

@@ -4,17 +4,19 @@
  * @subpackage HTML5_Boilerplate
  */
 ?>
+  
+  </div><!-- div#wrapper -->
 
-  <footer>
-      <p>
-        <?php bloginfo('name'); ?> is proudly powered by
-        <a href="http://wordpress.org/">WordPress</a>, and built using the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.
-        <br /><a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a>
-        and <a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a>.
-        <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
-      </p>
+  <footer class="rtf" id="footer">
+	 	<div id="footer-content" class="clearfix container">
+			<div id="footer-menu">
+				<?php wp_nav_menu( array( 'container' => '', 'theme_location' => 'footer', 'menu' => 'footer', 'fallback_cb' => 'footer_nav_fb', 'depth' => 2 ) ); ?>
+				<p id="copyright" class="copyright clear alignright">&copy; Clear Books Limited. 2012</p>
+			</div>
+			
+		</div>
   </footer>
-</div> <!--! end of #container -->
+
 
   <!-- Javascript at the bottom for fast page loading -->
 

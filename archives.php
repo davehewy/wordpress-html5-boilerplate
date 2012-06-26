@@ -10,7 +10,8 @@ Template Name: Archives
 
 <?php get_header(); ?>
 
-<div id="main">
+<div id="main" role="main" class="container">
+	<div class="blog-loop">
 
   <?php get_search_form(); ?>
 
@@ -28,8 +29,14 @@ Template Name: Archives
     </ul>
   </section>
 
-</div>
+	</div><!-- End blog loop-->
+	
+	<!-- Sidebar-->
+	<div class="blog-sidebar">
+		<?php get_sidebar(); ?>
+	</div>
+	<!-- End sidebar-->	
 
-<?php get_sidebar(); ?>
+</div>
 
 <?php get_footer(); ?>

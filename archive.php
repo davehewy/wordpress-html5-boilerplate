@@ -6,7 +6,8 @@
 
 get_header(); ?>
 
-<div id="main" role="main">
+<div id="main" role="main" class="container">
+	<div class="blog-loop">
 
   <?php if (have_posts()) : ?>
 
@@ -37,9 +38,41 @@ get_header(); ?>
     <article <?php post_class() ?>>
       <header>
         <h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-        <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('l, F jS, Y') ?></time>
       </header>
-      <?php the_content() ?>
+
+		<ul class="post-info">
+			<li>
+				<span class="mono-icon mono-icon-author mono-first"></span> 
+				<?php the_author_posts_link(); ?>
+			</li>
+			<li>
+				<span class="mono-icon mono-icon-time"></span>
+				<time datetime="<?php the_time('Y-m-d')?>"><?php the_time('l, F jS, Y') ?></time>
+			</li>
+			<li>
+				<span class="mono-icon mono-icon-comments"></span>
+				<a href="#comments"><?php comments_number( __("No comments"), __("1 comment"), __("% comments") ); ?></a>
+			</li>
+			<li class="folder">
+				<span class="mono-icon mono-icon-folder"></span>
+				<?php the_category(', ') ?>
+			</li>
+		</ul>
+		<div class="clearfix"></div>
+		<?php the_tags( '<p class="tags"><span class="mono-icon mono-icon-tags mono-first"></span> ', ', ', '</p>'); ?>
+
+	  <?php if(has_post_thumbnail()) : ?>
+		<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+		<?php the_post_thumbnail(); ?>
+		</a>
+	  <?php endif; ?>
+	
+	  <div class="entry-excerpt">
+      	<?php the_content() ?>
+	  </div>
+	
+	  <div class="clearfix"></div>
+
       <footer>
         <?php the_tags('Tags: ', ', ', '<br />'); ?>
         Posted in <?php the_category(', ') ?>
@@ -71,6 +104,14 @@ get_header(); ?>
 
   endif;
   ?>
+
+</div><!-- End blog loop-->
+
+<!-- Sidebar-->
+<div class="blog-sidebar">
+	<?php get_sidebar(); ?>
+</div>
+<!-- End sidebar-->
 
 </div>
 

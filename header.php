@@ -34,6 +34,9 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- CSS : implied media="all" -->
+  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."style.css") ?>
+
+  <!-- CSS : implied media="all" -->
   <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/style.css") ?>
 
   <!-- For the less-enabled mobile browsers like Opera Mini -->
@@ -47,7 +50,11 @@
 
   <?php wp_head(); ?>
 
-</head>
+  <!-- CSS : media query -->
+  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/respond.min.js") ?>
+
+  <!-- CSS : media query -->
+  <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/app.js") ?>
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 
@@ -56,10 +63,23 @@
 <!--[if IE 8 ]>    <body <?php body_class('ie8'); ?>> <![endif]-->
 <!--[if IE 9 ]>    <body <?php body_class('ie9'); ?>> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body <?php body_class('ie6'); ?>> <!--<![endif]-->
-
-  <div id="container">
-    <header role="banner">
-      <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-      <p class="description"><?php bloginfo('description'); ?></p>
-    </header>
+</head>
+<body>
+	
+<div id="wrapper">
+	<header role="banner" id="header-top">
+		<div id="header-content">
+			<nav id="primary-menu-container" class="container-nav">
+			
+				<?php 
+					wp_nav_menu( array( 'container' => '', 'menu_id' => 'primary-menu', 'menu_class' => '', 'theme_location' => 'primary', 'menu' => 'primary', 'fallback_cb' => 'primary_nav_fb' ) ); 
+				?>
+			
+				<div id="primary-select-container">
+					<div id="primary-select-mask"><span id="primary-select-mask-value">Select Page ...</span> <span id="primary-select-mask-bt"></span></div>
+				</div>
+			
+			</nav>
+	    </div><!-- #header-content -->	
+	</header>
 

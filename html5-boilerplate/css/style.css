@@ -33,7 +33,13 @@ time, mark, audio, video {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
-}                  
+}     
+
+hr{
+	background: #eee !important;
+	height: 1px;
+	border: none !important;
+}             
 
 article, aside, figure, footer, header, 
 hgroup, nav, section { display:block; }
@@ -164,8 +170,6 @@ button {  width: auto; overflow: visible; }
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
-
-
 /* 
  * Non-semantic helper classes 
  */
@@ -194,22 +198,898 @@ button {  width: auto; overflow: visible; }
 .clearfix { display: block; }
 
 
-
-
-
  /* Primary Styles
     Author: 
  */
 
+body,html{
+	background: url(../../images/clearbooks-bg.jpg) repeat;
+	height: 100%;
+}
+header, footer, article, section, nav, menu, hgroup {  
+   display: block; 
+}
+
+/* STICKY FOOTER */
+#wrapper{
+	padding-bottom: 220px;
+}
+
+/* - End sticky footer  */
+
+.container {
+	width: 950px;
+	margin: 0 auto;
+	position: relative;
+}
 
 
+/* FOOTER 
+---------- */
+#footer{
+    height: 220px; 
+}
+#footer{
+	background: #2d7eaf;
+}
+#footer-menu{
+	padding-top: 25px;
+	overflow: hidden;
+}
+#footer ul#menu-footer{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#footer ul#menu-footer li{
+	float: left;
+	width: 190px;
+}
+#footer ul#menu-footer li a{
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: none;
+	display: block;
+	padding-bottom: 10px;
+}
+#footer ul#menu-footer li ul.sub-menu{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#footer ul#menu-footer li ul.sub-menu li{
+	width: 190px;
+}
+#footer ul#menu-footer li ul.sub-menu li a{
+	color: #ddd;
+	text-decoration: none;
+	display: block;
+	padding-bottom: 10px;
+	font-size: 13px !important;
+	font-weight: normal !important;
+}
+#footer ul#menu-footer li ul.sub-menu li a:hover{
+	color: #fff;
+}
+#footer p.copyright{
+	float: left;
+	width: 180px;
+	color: #CCCCCC !important;
+	text-align: right;
+}
+
+/* HOMEPAGE
+----------- */
+
+.clearbooksLogo{
+	width: 141px;
+	margin: 30px auto 0 auto;
+}
+.underline-effect{
+	margin: 70px auto;
+	width: 600px;	
+}
+h2.section-heading{
+	position: relative;
+	text-align: center;
+	background: url(../../images/clearbooks-bg.jpg) no-repeat;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 5px;
+}
+.product-overflow{
+	overflow: hidden;
+	margin: 20px auto;
+	width: 900px;
+}
+.product-top-row{
+	overflow: hidden;
+	margin: 20px auto;
+	width: 655px;
+}
+.product-wrapper{
+	width: 190px;
+	margin: 0 35px 10px 0;
+	float: left;
+}
+.product-end{
+	margin-right: 0 !important;
+}
+.product-wrapper span{
+	display: block;
+	padding-top: 7px;
+	text-align: center;
+	font-size: 14px;
+}
+.product-wrapper span a{
+	text-decoration: none;
+}
+.product{
+	border: 5px solid #ccc;
+	-webkit-border-radius: 25px 25px;
+	-moz-border-radius: 25px 25px;
+	-o-border-radius: 25px 25px;
+	border-radius: 25px 25px;
+	padding: 10px;
+	width: 170px;
+	background: #F9F9F9;
+	position: relative;
+	text-decoration: none;
+	overflow: hidden;
+	display: block;
+}
+.product:hover{
+	border: 5px solid #bbb !important;
+	cursor: pointer;
+}
+.product-blue{ border: 5px solid #2d7eaf !important; box-shadow: 2px 2px 5px #ccc;}
+.product-yellow{ border: 5px solid #f6b517 !important; box-shadow: 2px 2px 5px #ccc;}
+.product-red{ border: 5px solid #df2429 !important; box-shadow: 2px 2px 5px #ccc;}
+.product-blue{ border: 5px solid #2d7eaf !important; box-shadow: 2px 2px 5px #ccc;}
+.product > .mini-logo{
+	background: url(../../images/clearbooks-mini.png) no-repeat;
+	height: 50px;
+	width: 39px;
+	margin: 5px auto 15px auto;
+}
+.product > .beta{
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	width: 87px;
+	height: 87px;
+	background: url(../../images/beta-label.png) no-repeat;
+}
+.product > span{
+	text-align: center;
+	font-size: 30px;
+	font-family: "myriad-pro",sans-serif;
+	font-weight: 400;
+	display: block;
+	color: #333;
+}
+.product > span > strong{
+	font-weight: bold !important;
+}
+.product > p{
+	width: 100%;
+	text-align: center;
+	display: block;
+	margin: 15px 0px;
+	color: #666;
+}
+
+/* Home - what our customers say
+------------------------------- */
+
+.home-happiness{
+	clear: both;
+	margin: 20px auto;
+	overflow: hidden;
+	width: 600px;
+}
+.happiness-icon{
+	background: url(../../images/happiness.png) no-repeat;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	margin-right: 15px;
+	float: left;
+}
+.home-happiness > p{
+	font-weight: bold;
+	line-height: 55px;
+}
+
+/* Home - Testimonials 
+--------------------- */
+.home-testimonials{
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 25px;
+	margin-bottom: 30px;
+}
+.home-testimonials > a.arrow-right, .home-testimonials > a.arrow-left{
+	display: block;
+	height: 63px;
+	width: 60px;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+}
+.home-testimonials > a.arrow-right{	
+	float: left;
+	width: 100px;
+	left: 0;
+	background: url(../../images/left-arrow.png) no-repeat; }
+.home-testimonials > a.arrow-left{	
+	float: right;
+	background: url(../../images/right-arrow.png) no-repeat;
+	right: 0; }
+.home-testimonials > a.arrow-left:hover{
+	background: url(../../images/right-arrow-over.png) no-repeat;	
+}	
+.home-testimonials > a.arrow-right:hover{
+	background: url(../../images/left-arrow-over.png) no-repeat;	
+}
+.home-testimonials ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 600px;
+}
+.home-testimonials > ul > li > blockquote > cite{
+	font-size: 16px;
+	display: block;
+	font-style: normal !important;
+}
+.home-testimonials > ul > li > blockquote > cite > span{
+	font-size: 16px;
+	display: block;
+	padding-top: 4px;
+	font-weight: bold;
+}
+.home-testimonials > ul > li > blockquote{
+	margin-top: 15px;
+	background: url(../../images/top-speech-marks.png) no-repeat top left;
+	padding: 0 0 0 85px;
+	position: relative;
+}
+.home-testimonials > ul > li > blockquote > p{
+	margin-top: 15px;
+}
+.home-testimonials > ul > li > blockquote > span{
+	display: block;
+	height: 45px;
+	width: 55px;
+	background: url(../../images/bottom-speech-marks.png) no-repeat bottom right;
+	position: absolute;
+	right: -60px;
+	bottom: -25px;
+}
+.home-testimonials > ul > li > blockquote > img.avatar{
+	float: right;
+	border: 5px solid #fff;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+.home-testimonials > ul > li > blockquote > strong{
+	display: block;
+	padding-top: 15px;
+}
+.home-testimonials > ul > li > blockquote > footer{
+	padding-top: 10px;
+	font-style: italic;
+	color: #1296e2;
+	font-size: 14px;
+}
+
+/* Projects from the team 
+------------------------ */
+
+.team-projects{
+	position: relative;
+	width: 100%;
+	height: 450px;
+}
+.we-love-clearbooks{
+	display: block;
+	background: url(../../images/we_love_clearbooks.png) no-repeat;
+	height: 295px;
+	width: 240px;
+	position: absolute;
+	top: 0; 
+	left: 0;
+}
+.stanley{
+	display: block;
+	background: url(../../images/stanley_tax_calculator.png) no-repeat;
+	height: 320px;
+	width: 260px;
+	position: absolute;
+	left: 350px;
+	top: 0px;
+}
+.accounting-is-boring{
+	display: block;
+	background: url(../../images/accounting_is_boring.png) no-repeat;
+	height: 320px;
+	width: 260px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.find-a-uk-accountant{
+	display: block;
+	background: url(../../images/find_a_uk_accountant.png) no-repeat;
+	height: 60px;
+	width: 300px;
+	position: absolute;
+	left: 150px;
+	top: 360px;	
+}
+.wordpress-timeline{
+	display: block;
+	background: url(../../images/wordpress_timeline.png) no-repeat;
+	height: 75px;
+	width: 305px;
+	top: 345px;
+	right: 100px;
+	position: absolute;
+}
+
+/* Connect with us
+------------------- */
+
+.connect-with-us{
+	overflow: hidden;
+}
+.connect-with-us ul.social-media{
+	list-style-type: none;
+	padding-top: 5px;
+}
+.connect-with-us ul.social-media li{
+	float: left;
+}
+.connect-with-us ul.social-media li a{
+	display: block;	
+	padding: 10px;
+	padding-top: 69px;
+	width: 118px;
+	height: 60px;	
+	text-decoration: none;
+	color: #fff;
+	margin-right: 15px;
+	text-align: center;
+	font-size: 14px;	
+}
+.connect-with-us ul.social-media li a.end{
+	margin-right: 0px !important;
+}
+.connect-with-us ul.social-media li a:hover {
+	opacity: 0.8;
+}
+.connect-with-us ul.social-media li a span{
+	display: block;
+	margin-top: 0px;
+	text-align: center;
+	font-size: 22px;
+	font-style: italic;
+}
+.connect-with-us ul.social-media li a.twitter{
+	background: url(../../images/social-icons-large.png);
+	background-position: 1px 1px;
+}
+.connect-with-us ul.social-media li a.facebook{
+	background: url(../../images/social-icons-large.png);
+	background-position: -159px 1px;
+}
+.connect-with-us ul.social-media li a.flickr{
+	background: url(../../images/social-icons-large.png);
+	background-position: -319px 1px;
+}
+.connect-with-us ul.social-media li a.email{
+	background: url(../../images/social-icons-large.png);
+	background-position: -479px 1px;
+}
+.latest_tweet{
+	float: left;
+	width: 320px;
+	height: 153px;
+	background: url(../../images/twitter-tweet-box.png) no-repeat;
+	margin-right: 20px;
+}
+.latest_tweet span{
+	padding: 25px;
+	display: block;
+	font-size: 14px;
+}
+ul.flickr-feed{
+	list-style-type: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	margin-top: 25px !important;
+	padding-left: 5px !important;
+}
+ul.flickr-feed li{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+ul.flickr-feed li a{
+	width: 120px;
+	display: block;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin-right: 40px;
+	margin-bottom: 5px;
+	height: 105px;
+	box-shadow: 1px 1px 5px #ddd;
+}
+ul.flickr-feed li a.end{
+	margin-right: 0 !important;
+}
+
+/* THEME HEADINGS
+----------------- */
+
+h1{
+	font-family: "myriad-pro",sans-serif;
+	font-size: 20px;
+	text-shadow: 0px 0px 1px #fff;
+}
+h1.homepage{
+	font-size: 32px;
+	font-weight: normal;
+	width: 570px;
+	margin: 15px auto 0 auto;
+	text-align: center;
+}
+h1.homepage > strong{
+	font-weight: 800;
+}
+h2{
+	font-family: "myriad-pro",sans-serif;
+	color: #747474;
+	font-size: 28px;
+	font-style: italic;
+	font-weight: 400;
+	text-shadow: 0px 0px 1px #fff;	
+}
 
 
+/* MENU 
+--------------- */
+#header-content{
+	background: #2d7eaf;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.container-nav{
+	width: 960px;
+	margin: 0px auto;
+	padding: 0;
+}
+ul#primary-menu{
+	margin: 0;
+	padding: 0;
+}
+ul#primary-menu li{
+	float: left;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	width: 176px;
+}
+ul#primary-menu li.end{
+	margin-right: 0px;
+}
+ul#primary-menu li a{
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding: 12px 0px 12px 0px;
+	line-height: 16px;
+	font-size: 14px;
+	color: #fff !important;
+	text-decoration: none;
+	text-align: center;
+}
+ul#primary-menu li.home{
+	width: 80px;
+}
+ul#primary-menu li.home a{
+	display: block;
+	border-left: none !important;
+	background: url(../../images/menuLogo.png) no-repeat 28px center;
+	height: 16px;
+}
+ul#primary-menu li.home a:hover{
+	background: #0b5b89 url(../../images/menuLogo.png) no-repeat 28px center;
+}
+ul#primary-menu li.current-menu-item, 
+ul#primary-menu li.current_page_item,
+ul#primary-menu li.current_page_parent{
+	background: #0b5b89;
+}
+ul#primary-menu li.current-menu-item a, ul#primary-menu li.current_page_item a{
+	color: #F1F1F1 !important;
+}
+ul#primary-menu li a:hover{
+/*	background: #0b5b89;*/
+	text-decoration: underline;
+}
+
+/* COMPACT MENU */
+#primary-select-container {
+	position: relative;
+	display: none;
+}
+.primary-select-menu {
+	width: 100% !important;
+	height: 44px !important;
+	line-height: 26px !important;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 100;
+	display: block;
+	opacity: 0;
+	-webkit-appearance: menulist-button;
+}
+#primary-select-mask {
+	color: #888;
+	border: 1px solid #DDD;
+	background: #FAFAFA;
+	-webkit-box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.01);
+	-moz-box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.01);
+	box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.01);
+	padding: 0 55px 0 10px;
+	font-size: 16px;
+	position: relative;
+	width: 215px;
+	margin: 10px auto 20px;
+	height: 40px;
+	line-height: 40px;
+	z-index: 1;
+}
+#primary-select-mask-bt {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 45px;
+	height: 40px;
+	border-left: 1px solid #DDD;
+	background: url(../images/drop-down-bt.png) no-repeat;
+}
+
+/* Blog single
+------------- */
+#main{
+	overflow: hidden;
+}
+.blog-single{
+	margin-top: 20px;
+	float: left;
+	width: 65%;
+	background: #FFF;
+	box-shadow: 1px 2px 5px #DDD;
+	margin-bottom: 5px;
+	border: 1px solid #DDD;
+}
+.blog-single-inner{
+	padding: 20px;
+}
+article.type-post h2{
+	margin-bottom: 20px;
+}
+article.type-post p{
+	margin-bottom: 15px;
+}
+article.type-post img{
+	width: 100%;
+	max-width: 100%;
+}
+article.type-post img.wp-post-image{
+	margin-bottom: 20px;
+}
+.blog-single-inner article p.tags{
+	margin-top: 5px;
+}
+.blog-single-inner article p.tags a{
+	text-decoration: none;
+}
+.blog-single-inner article ul.post-info{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.blog-single-inner article ul.post-info li{
+	float: left;
+}
+.blog-single-inner article p.post-footer-tags{
+	margin-top: 20px;
+}
+.blog-single-inner div.about-the-author{
+	background: #F1F1F1;
+	border: 1px solid #ddd;
+	margin: 30px 0;
+	padding: 15px;
+	overflow: hidden;
+}
+.blog-single-inner nav#other-posts{
+	margin: 25px 0;
+	overflow: hidden;
+}
+.blog-single-inner nav#other-posts div.previous-link{
+	float: left;
+	width:49.5%;
+	text-align: left;
+}
+.blog-single-inner nav#other-posts div.next-link{
+	float: right;
+	width:49.5%;
+	text-align: right;
+}
+div.about-the-author img.avatar-80{
+	height: 80px;
+	width: 80px;
+	float: left;
+	margin-right: 20px;
+}
+div.about-the-author h4{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+/* Blog - The Loop
+------------------ */
+.blog-loop{
+	margin-top: 20px;
+	float: left;
+	width: 65%;
+}
+.blog-loop h2.pagetitle{
+	margin-bottom: 20px;
+}
+.blog-loop > article, 
+.blog-loop > section > article{
+	padding: 20px;
+	background: #FFF;
+	box-shadow: 1px 2px 5px #DDD;
+	margin-bottom: 25px;
+	border: 1px solid #DDD;	
+}
+.blog-loop > article h2 a, 
+.blog-loop > section > article h2 a{
+	text-decoration: none !important;
+}
+.blog-loop > article img, 
+.blog-loop > section > article img{
+	max-width: 100%;
+	max-height: 175px;
+}
+.blog-loop > section > article h3 a{
+	font-family: "myriad-pro",sans-serif;
+	text-decoration: none !important;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 400;	
+	margin-bottom: 8px;
+}
+.blog-loop > section > article h3{
+	display: block;
+	margin-bottom: 4px;
+}
+.blog-loop > section > article a.more-link{
+	float: right;
+	display: block;
+	margin: 20px 0;
+	padding: 8px 12px;
+	background: #ccc;
+	-webkit-border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	border-radius: 5px 5px;
+	background-image: linear-gradient(bottom, rgb(237,237,237) 8%, rgb(245,245,245) 54%, rgb(242,242,242) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(237,237,237) 8%, rgb(245,245,245) 54%, rgb(242,242,242) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(237,237,237) 8%, rgb(245,245,245) 54%, rgb(242,242,242) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(237,237,237) 8%, rgb(245,245,245) 54%, rgb(242,242,242) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(237,237,237) 8%, rgb(245,245,245) 54%, rgb(242,242,242) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.08, rgb(237,237,237)),
+		color-stop(0.54, rgb(245,245,245)),
+		color-stop(0.77, rgb(242,242,242))
+	);
+	border: 1px solid #ddd;
+	color: #444;
+}
+.blog-loop > section > article a.more-link:hover{
+	color: #000;
+}
+.blog-loop article ul.post-info{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+}
+.blog-loop article ul.post-info li{
+	float: left;
+}
+.blog-loop article p.tags{
+	margin-top: 5px;
+}
+.blog-loop article div.entry-excerpt{
+	margin: 20px 0;
+}
+
+/* Blog Sidebar 
+--------------- */
+.blog-sidebar{
+	margin-top: 20px;
+	float: right;
+	margin-right: 1%;
+	width: 30%;
+	background: #FFF;
+	box-shadow: 1px 2px 5px #DDD;
+	margin-bottom: 5px;
+	border: 1px solid #DDD;	
+}
+.blog-sidebar #sidebar{
+	padding: 20px;
+}
+.blog-sidebar ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.blog-sidebar ul li a{
+	text-decoration: none;
+	padding: 3px 0;
+	display: block;
+}
+.blog-sidebar h2{
+	margin: 18px 0;
+}
+
+/* Comment Formatting
+-------------------- */
+
+h3#comments{
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+.commentlist{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.commentlist li{
+	overflow: hidden;
+	margin-top: 40px;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 1px dashed #eee;
+}
+.commentlist li img.avatar	{
+	float: left;
+	width: 66px;
+	height: 66px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	
+}
+section#respond{
+	clear: both;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+section#respond h3{
+	margin-bottom: 30px;
+	font-size: 16px;
+}
+section#commentlist{
+	margin-top: 25px;
+}
+section#respond form#commentform label{
+	width: 200px !important;
+	float: left;
+	display: block;
+	vertical-align: middle;
+	line-height: 26px;
+}
+section#respond form#commentform textarea{
+	padding: 5px;
+	width: 98%;
+}
+section#respond form#commentform input[type='text'], 
+section#respond form#commentform input[type='email'], 
+section#respond form#commentform input[type='url']{
+	border: 1px solid #ccc;
+	line-height: 20px;
+	-webkit-border-radius: 5px 5px;
+	-moz-border-radius: 5px 5px;
+	border-radius: 5px 5px;
+	padding: 3px 3px 3px 3px;
+	width: 225px;
+}
+section#respond form#commentform input[type='submit']{
+	float: right;
+}
+cite.fn{
+	font-size: 16px;
+	display: block;
+	font-weight: bold;
+	color: #118bd2;
+	font-style: normal;
+	margin-bottom: 7px;
+}
+a.comment-edit-link{
+	float: right;
+}
+article.comment a.comment-reply-link{
+	float: right;
+}
+article.comment footer{
+	clear: both;
+	display: block;
+}
+article.comment footer time{
+	float: right;
+}
 
 
+/* 16 x 16 Icons
+---------------- */
 
+.mono-icon{
+	background: transparent url(../../images/mono-16x16.png) no-repeat top left;
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	margin-right: 6px;
+	vertical-align: middle;
+	width: 16px;
+	margin: 0 5px 0 10px;
+}
+.mono-first{
+	margin-left: 0 !important;
+}
+.mono-icon-author{ background-position: -336px -0px;}
+.mono-icon-time{ background-position: -272px -0px;}
+.mono-icon-comments{ background-position: -304px -0px; }
+.mono-icon-folder{ background-position: -400px -0px;}
+.mono-icon-tags{ background-position: -1488px -0px;}
 
-
+/* Buttons 
+----------- */
+.submit{
+	background: #1296e2;
+	display: block;
+	padding: 9px 15px;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+	-webkit-border-radius: 3px 3px;
+	-moz-border-radius: 3px 3px;
+	border-radius: 3px 3px;
+}
+.submit:hover{
+	background: #13a1f4;
+}
+textarea{
+	border: 1px solid #ddd;
+	width: 100%;
+}
 
 /* 
  * print styles
@@ -243,22 +1123,170 @@ button {  width: auto; overflow: visible; }
  * Media queries for responsive design
  */
 
-@media all and (orientation:portrait) { 
-  /* Style adjustments for portrait mode goes here */
-  
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	.container{ width: 320px; }
+	.blog-single,
+	.blog-loop{
+		width: 318px;
+		float: none;
+		box-shadow: none;
+	}
+	.blog-sidebar{
+		display: none;
+	}
+	.blog-single article.type-post p{
+		font-size: 1.1em;
+	}
+	.blog-single article.type-post p.tags{
+		font-size: 1em !important;
+	}	
+	.blog-single article.type-post img{
+		max-height: 150px;
+	}
+	.blog-single article.type-post ul.post-info li.folder{
+		clear: both !important;
+		margin-top: 5px;
+	}
+	.blog-single article.type-post ul.post-info li.folder span{
+		margin-left: 0 !important;
+	}
+	h1.homepage{
+		width: 320px;
+	}
+	.product-top-row{
+		width: 318px;
+	}
+	.product-wrapper{
+		width: 142px;
+		margin: 0 34px 10px 0;
+	}
+	.product{
+		width: 116px;
+		border: 3px solid #CCC;
+	}	
+	.product-blue{ border: 3px solid #2d7eaf !important;}
+	.product-yellow{ border: 3px solid #f6b517 !important;}
+	.product-red{ border: 3px solid #df2429 !important;}
+	.product-blue{ border: 3px solid #2d7eaf !important;}	
+	.product:hover{
+		border: 3px solid #CCC !important;
+		box-shadow: none !important;		
+	}
+	.product > .mini-logo{
+		margin-bottom: 0 !important;
+	}
+	.product > span{
+		line-height: 25px !important;
+		font-size: 18px;
+	}
+	.product > p {
+		margin: 5px 0 0 0 !important;
+		font-size: 12px;
+	}
+	#footer{
+		height: 440px !important;
+	}
+	#footer-menu{
+		width: 100%;
+	}
+	#footer ul#menu-footer{
+		overflow: hidden;
+		width: 100%;
+		float: left;
+		margin-bottom: 15px !important;
+	}
+	#footer ul#menu-footer li{
+		width: 49%;
+		margin-bottom: 15px;
+	}
+	#footer ul.sub-menu{
+		width: 49%;
+	}
+	#footer ul.sub-menu li{
+		margin-bottom: 0 !important;
+	}
+	#footer p.copyright{
+		float:right;
+		margin-top: -15px;
+		color: #ccc;
+	}
+	#wrapper{
+		padding-bottom: 440px !important;
+	}
+	#footer ul#menu-footer li.right,
+	#footer ul#menu-footer li.right ul.sub-menu li{
+		text-align: right;
+		width: 160px;
+	}
 }
 
-@media all and (orientation:landscape) { 
-  /* Style adjustments for landscape mode goes here */
-  
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.container{ width: 480px; }
+	.blog-single,
+	.blog-loop{
+		width: 473px;
+		float: none;
+	}
+	.blog-sidebar{
+		display: none;
+	}	
+	#footer ul#menu-footer li.right{
+		width: 49%;
+	}
+	#footer ul#menu-footer li ul.sub-menu{
+		width: 100%;
+		overflow: hidden;
+	}
+	#footer ul#menu-footer li.right ul.sub-menu li,
+	#footer ul#menu-footer li.right ul.sub-menu li a{
+		text-align: right;
+		display: block;
+		width: 100%;
+	}
+}
+
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.container{ width: 768px; }
+	.blog-single{
+		margin-left: 1%;
+	}
+	#footer p.copyright{
+		float: right;
+		color: #ccc;
+		margin-top: 8px;
+	}
+	#footer{
+		height: 240px !important;
+	}
+	#wrapper{
+		padding-bottom: 240px !important;
+	}
+	
 }
 
 /* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
    Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
+    
+   	/* Prevent iOS, WinMobile from adjusting font size */
+  	html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
   
-  
-  /* Prevent iOS, WinMobile from adjusting font size */
-  html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
+ 	/* Adjust the single blog page accordingly */
+	.container{
+		width: 460px;
+		margin: 0px auto;
+	}
 }
 
+.twitter-tweet-rendered{
+	width: 400px !important;
+}

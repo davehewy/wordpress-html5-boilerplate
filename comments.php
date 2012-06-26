@@ -17,40 +17,13 @@
 
 <!-- You can start editing here. -->
 
-<?php if ( have_comments() ) : ?>
-  <h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
-
-  <nav>
-    <div><?php previous_comments_link() ?></div>
-    <div><?php next_comments_link() ?></div>
-  </nav>
-
-  <ol class="commentlist">
-  <?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
-  </ol>
-
-  <nav>
-    <div><?php previous_comments_link() ?></div>
-    <div><?php next_comments_link() ?></div>
-  </nav>
- <?php else : // this is displayed if there are no comments so far ?>
-
-  <?php if ( comments_open() ) : ?>
-    <!-- If comments are open, but there are no comments. -->
-
-   <?php else : // comments are closed ?>
-    <!-- If comments are closed. -->
-    <p class="nocomments">Comments are closed.</p>
-
-  <?php endif; ?>
-<?php endif; ?>
-
-
 <?php if ( comments_open() ) : ?>
+	
+<hr />
 
 <section id="respond">
 
-  <h3><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>
+  <h3><?php comment_form_title( 'Leave a comment', 'Leave a comment to %s' ); ?></h3>
 
   <div class="cancel-comment-reply">
     <small><?php cancel_comment_reply_link(); ?></small>
@@ -74,7 +47,7 @@
   </p>
 
   <p>
-    <label for="email"><small>Mail (will not be published) <?php if ($req) echo "(required)"; ?></small></label>
+    <label for="email">Mail <small>(will not be published)</small> <?php if ($req) echo "(required)"; ?></label>
     <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
   </p>
 
@@ -85,12 +58,11 @@
 
   <?php endif; ?>
 
-  <p id="allowed_tags"><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
 
   <p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea></p>
 
   <p>
-    <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+    <input name="submit" type="submit" id="submit" tabindex="5" class="submit" value="Submit Comment" />
     <?php comment_id_fields(); ?>
   </p>
   <?php do_action('comment_form', $post->ID); ?>
@@ -99,5 +71,44 @@
 
   <?php endif; // If registration required and not logged in ?>
 </section>
+
+<div class="clearfix"></div>
+
+<?php if ( have_comments() ) : ?>
+	
+  <hr />
+
+	<section id="commentlist">
+	
+  <h3 id="comments"><?php comments_number('No Comments', 'Showing 1 Comments', 'Showing % Comments' );?></h3>
+
+  <nav>
+    <div><?php previous_comments_link() ?></div>
+    <div><?php next_comments_link() ?></div>
+  </nav>
+
+  <ol class="commentlist">
+  <?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
+  </ol>
+
+  <nav>
+    <div><?php previous_comments_link() ?></div>
+    <div><?php next_comments_link() ?></div>
+  </nav>
+
+	</section>
+
+ <?php else : // this is displayed if there are no comments so far ?>
+
+  <?php if ( comments_open() ) : ?>
+    <!-- If comments are open, but there are no comments. -->
+
+   <?php else : // comments are closed ?>
+    <!-- If comments are closed. -->
+    <p class="nocomments">Comments are closed.</p>
+
+  <?php endif; ?>
+<?php endif; ?>
+
 
 <?php endif; // if you delete this the sky will fall on your head ?>
